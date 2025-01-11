@@ -1,3 +1,15 @@
+[tool.poetry]
+name = "jupyterlab_scratchpad"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^4.3.4"
+jinja2-time = "^0.2.0"
+
 [build-system]
 requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version>=0.3.2"]
 build-backend = "hatchling.build"

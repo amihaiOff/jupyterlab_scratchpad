@@ -3,3 +3,51 @@
 
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
+.html, body, .hww {
+    height: 100%
+ }
+
+.sbhw {
+    min-height: 200px;
+    padding: 8px;
+    background-color: var(--jp-layout-color1);
+}
+
+.sbhw body {
+    background-color: #212121;
+}
+ 
+.sbhw button {
+    width: 72px;
+    height: 72px;
+    margin: 15%;
+    margin-bottom: 5%;
+    font-size: 200%;
+}
+
+.sbhw .jp-Cell {
+    margin: 5px;
+    padding: 5px;
+    border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
+    border-radius: var(--jp-border-radius);
+    position: relative;
+}
+
+.sbhw .jp-InputArea-editor {
+    min-height: 50px;
+    background: var(--jp-cell-editor-background);
+    position: relative;
+    overflow: visible;
+}
+
+/* Ensure cell is editable in both command and edit mode */
+.jp-Notebook.jp-mod-commandMode .jp-Cell.jp-mod-selected .jp-InputArea-editor:focus-within,
+.jp-Notebook:not(.jp-mod-commandMode) .jp-Cell.jp-mod-selected .jp-InputArea-editor {
+    border: var(--jp-border-width) solid var(--jp-cell-editor-active-border-color);
+}
+
+/* Ensure proper focus handling for JupyterLab 4.1+ */
+.jp-Notebook.jp-mod-commandMode :focus:not(:read-write),
+.jp-Notebook:not(.jp-mod-readWrite) :focus:not(:read-write) {
+    outline: var(--jp-border-width) solid var(--jp-cell-editor-active-border-color);
+}
